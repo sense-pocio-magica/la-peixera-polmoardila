@@ -1,25 +1,21 @@
-﻿namespace Pescalao;
+﻿
+namespace Tasca;
 
 public class Peix : Animal_Mari
 {
-    public Peix(int x, int y,Sexes? Sexe) : base(x, y,Sexe)
-    {
+    public Peix(int x, int y,Sexes? Sexe) : base(x, y,Sexe){}
 
-    }
-    private int x = 0;
-    private int y = 0;
-    
-    public override void Moviment()
+    public override void HeTrobat(Animal_Mari altre)
     {
-        X += x;
-        Y += y;
-    }
-
-    public override void HeTrobat(Animal_Mari animal_mari)
-    {
-        if (animal_mari is Peix && animal_mari.Sexe == Sexe)
+        if (altre is Tauro)
         {
             Mata();
+            return;
+        }
+        if (altre is Peix && altre.Sexe == Sexe)
+        {
+            Mata(); // Mor el peix
+            altre.Mata(); // Mata al peix que s'ha trobat
         }
     }
 }

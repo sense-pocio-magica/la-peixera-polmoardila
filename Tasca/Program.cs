@@ -1,9 +1,6 @@
-﻿namespace Tasca;
+﻿using System;
 
-internal class Program
+namespace Tasca
 {
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Hello, World!");
-    }
+    Console.WriteLine("Hello, World!");
 }

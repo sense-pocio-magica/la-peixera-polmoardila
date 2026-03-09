@@ -1,4 +1,7 @@
-﻿namespace Pescalao;
+﻿using System;
+using System.Collections.Generic;
+
+namespace Tasca;
 
 public class Peixera
 {
@@ -7,18 +10,35 @@ public class Peixera
 
     public void CrearAnimals()
     {
-        for(int i = 0; i <= 50;i++)
+        for(int i = 1; i <= 50;i++)
         {
             animals_marins.Add(new Peix(rnd.Next(1,21), rnd.Next(1,21),Sexes.Masculi));
         }
-        for(int i = 0; i <= 50;i++)
+        for(int i = 1; i <= 50;i++)
         {
-            animals_marins.Add(new Peix(rnd.Next(1,21), rnd.Next(1,21),Sexes.Femini));
+            animals_marins.Add(new Peix(rnd.Next(1,21), rnd.Next(1,21),Sexes.Femeni));
         }
-        for(int i = 0; i <= 10;i++)
+        for(int i = 1; i <= 10;i++)
         {
             animals_marins.Add(new Tauro(rnd.Next(1,21), rnd.Next(1,21),Sexes.Masculi));
         }
+        for(int i = 1; i <= 10;i++)
+        {
+            animals_marins.Add(new Tauro(rnd.Next(1,21), rnd.Next(1,21),Sexes.Femeni));
+        }
+        for(int i = 1; i <= 15;i++)
+        {
+            animals_marins.Add(new Pop(rnd.Next(1,21), rnd.Next(1,21),Sexes.Sense));
+        }
+        for(int i = 1; i <= 3;i++)
+        {
+            animals_marins.Add(new Tortuga(rnd.Next(1,21), rnd.Next(1,21),Sexes.Masculi));
+        }
+        for(int i = 1; i <= 3;i++)
+        {
+            animals_marins.Add(new Tortuga(rnd.Next(1,21), rnd.Next(1,21),Sexes.Femeni));
+        }
+        
     }
     
     public virtual bool TrobatDosPeixos()
