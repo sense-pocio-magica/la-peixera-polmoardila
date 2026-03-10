@@ -7,7 +7,7 @@ public class Tauro : Animal_Mari
     }
     private int Rondes;
 
-    protected override void Moviment()
+    protected internal override void Moviment()
     {
         base.Moviment();
         

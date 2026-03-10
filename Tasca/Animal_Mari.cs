@@ -19,7 +19,7 @@ public abstract class Animal_Mari
 
     public Sexes Sexe { get; set; }
     protected static Random rnd = new Random();
-    protected bool viu = true;
+    protected internal bool viu = true;
     private int Id;
     public Animal_Mari(int x, int y, Sexes? sexe, bool viu = true)
     {
@@ -60,9 +60,9 @@ public abstract class Animal_Mari
         }
     }
 
-    protected virtual void Moviment()
+    protected internal virtual void Moviment()
     {
-        // Moviment del anial mari
+        // Moviment del animal mari
         X += DireccioX;
         Y += DireccioY;
         // En cas de que toquin un lateral sense tocar un peix tornarà al lloc contrari a la seva direcció

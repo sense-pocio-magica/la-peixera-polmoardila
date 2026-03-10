@@ -5,7 +5,7 @@ namespace Tasca;
 
 public class Peixera
 {
-    private List<Animal_Mari> animals_marins = [];
+    internal List<Animal_Mari> animals_marins = [];
     private Random rnd = new Random();
 
     public void CrearAnimals()

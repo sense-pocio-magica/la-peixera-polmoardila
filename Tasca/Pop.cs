@@ -6,7 +6,7 @@ public class Pop : Animal_Mari
     {
 
     }
-    protected override void Moviment()
+    protected internal override void Moviment()
     {
         // Com el pop es mou de diferent manera que els altres haurem d'implementar la seguent estructura de moviment
         if (X >= 20 && Y == 1)
