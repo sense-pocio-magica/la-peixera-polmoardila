@@ -14,8 +14,8 @@ public abstract class Animal_Mari
 
     protected int X;
     protected int Y;
-    protected int DireccioX;
-    protected int DireccioY;
+    protected internal int DireccioX;
+    protected internal int DireccioY;
 
     public Sexes Sexe { get; set; }
     protected static Random rnd = new Random();
@@ -23,7 +23,7 @@ public abstract class Animal_Mari
     private int Id;
     public Animal_Mari(int x, int y, Sexes? sexe, bool viu = true)
     {
-        Id = Id++;
+        Id = Id++ ;
         X = x;
         Y = y;
         if (sexe == null)
@@ -34,7 +34,7 @@ public abstract class Animal_Mari
         Direccio();
     }
 
-    protected void Direccio()
+    protected internal void Direccio()
     {
         int dir = rnd.Next(0, 4);
         DireccioX = 0;
@@ -99,6 +99,12 @@ public abstract class Animal_Mari
         viu = false;
     }
 
+    protected internal (int,int) ObtenirDireccio()
+    {
+        (int,int) direccio = (DireccioX,DireccioY);
+        return direccio;
+    }
+    
     public abstract void HeTrobat(Animal_Mari altre);
 }
 

@@ -2,5 +2,4 @@
 
 namespace Tasca
 {
-    Console.WriteLine("Hello, World!");
 }
